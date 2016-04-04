@@ -1,5 +1,5 @@
 
-## Few Features of a Smart Home Security System
+## Features of a Smart Home Security System
 
 - Facial Recognition
 - Object type detection
