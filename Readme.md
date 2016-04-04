@@ -28,7 +28,7 @@ This can be accomplished easily through pre-labelled data from ImageNet or other
 
 **Features**
 
-Extracting the eigenfaces: One of the major issues with image recognition is the sheer number of features that we need to deal with. A simple way to get around this can be Principal Component Analysis (PCA) which reformulates new features from the old to maximise the explained variance in the data.  These new compressed features are now referred to as "eigenfaces".
+Extracting the eigenfaces: One of the major issues with image recognition is the sheer number of features that we need to deal with. A simple way to get around this can be Principal Component Analysis (PCA) which reformulates new features from the old to maximise the explained variance in the data.  These new compressed features derived from human faces are now referred to as "eigenfaces".
 
 ***Potential vulnerabilities***
 
@@ -49,13 +49,13 @@ It would be computation expensive to train a model on K classes, hence one way i
 Given the large amount of data needed to train CNNs, the online pre-labelled datasets such as Pascal V0C or ImageNet are state of the art in training object classifiers. CloudCV (<http://cloudcv.org/objdetect/>) goes a step further and provides a combined, downsized dataset with relevant features extracted.
 
 ### Caffe: 
-Performs image classification using convoluted neural nets and includes OpenCV, Blas libraries allowing efficient computation in C++. It also includes libraries for Python (pycaffe) and Matlab (matcaffe) as well as supports a variety of input formats for images. Another big plus are the pre trained models offered by Caffe (Model Zoo).
+Performs image classification using convoluted neural nets and includes OpenCV, Blas libraries allowing efficient computation in C++. It also includes libraries for Python (pycaffe) and Matlab (matcaffe) as well as supports a variety of input formats for images. Another big plus are the pre trained models offered by Caffe's [Model Zoo][7].
 
 ## Sound Analysis
 
 The field of 'Computational Auditory Scene Analysis' aims at accurately classifying acoustic sequences to detect sound events related to specific activities or 'audio based environment modelling'.
 
-Acoustic Analysis can give us a large amount of information about the surroundings that video/image analysis alone cannot contextualize. Examples of this include screaming, gunshots, glass breaking, footsteps from the vicinity, etc. Other features of the person like gender, emotion can be improved in accuracy with additional audio input which can classify the pitch, loudness and otehr vocal pointers to classify the situation/person.
+Acoustic Analysis can give us a large amount of information about the surroundings that video/image analysis alone cannot contextualize. Examples of this include screaming, gunshots, glass breaking, footsteps from the vicinity, etc. Other features of the person like gender, emotion can be improved in accuracy with additional audio input which can classify the pitch, loudness and other vocal pointers to classify the situation/person.
 
 A Conventional Acoustic Sounds Recognition Classifier is the Hidden Markov Model with Gaussian Mixture Models, while ANN, Decision Trees and SVM can be used for further Discriminative classification. K-means clustering or trained classification can be employed to identify deviations from the background noise.
 
@@ -91,18 +91,21 @@ Since we are looking at keyword detection rather than text transcription, we can
 
 ### Performance Issues
 
-Real-time Image, Audio analysis requires a prohibitive amount of computational processing power and this could easily become a major issue. While the training of the model takes place in its 'rest' mode by the user and is usually the most computationally expensive step, the prediction step would require a non null amount of time to process frames, audio time series and update the status every few seconds. Relatively recent Convolutional Network Cascades hold the potential to enable the coexistence high accuracy as well as high performance for visual detection systems. These methods focus on dropping false positive suggestions like the background in the early stages and focus on more advanced features only for inputs that successfully clear the earlier low resolution  stages.
+Real-time Image, Audio analysis requires a prohibitive amount of computational processing power and this could easily become a major issue. While the training of the model takes place in its 'rest' mode by the user and is usually the most computationally expensive step, the prediction step would require a non null amount of time to process frames, audio time series and update the status every few seconds. Relatively recent Convolutional Network Cascades hold the potential to enable the coexistence high accuracy as well as high performance for visual detection systems. These methods focus on dropping false positive suggestions like the background in the early stages and focus on more advanced features only for inputs that successfully clear the earlier low resolution  stages as [Li, et.al. demonstrate in this paper][6].
 
 ## References:
 
 [1]: [Multi-view Face Detection Using Deep Convolutional Neural Networks, S. Sudhakal et.al., Yahoo](http://www.cvrobot.net/wp-content/uploads/2015/06/ICMR-2015-Multi-view-Face-Detection-Using-Deep-Convolutional-Neural-Networks.pdf)
 
-[2]: [Acoustic Detection of Human Activities in Natural Environments", STAVROS NTALAMPIRAS et. al.](http://ec.europa.eu/environment/life/project/Projects/index.cfm?fuseaction=home.showFile&rep=file&fil=AMIBIO_periodical_article_EN_2012.pdf)
+[2]: [Acoustic Detection of Human Activities in Natural Environments", Stavros Ntalampiras et. al.](http://ec.europa.eu/environment/life/project/Projects/index.cfm?fuseaction=home.showFile&rep=file&fil=AMIBIO_periodical_article_EN_2012.pdf)
 
-[3]: Technologies for Smart Sensors and Sensor Fusion, by Kevin Yallup, Krzysztof Iniewski, CRC Press
+[3]: [Technologies for Smart Sensors and Sensor Fusion, by Kevin Yallup, Krzysztof Iniewski, CRC Press](https://books.google.ch/books?id=y27OBQAAQBAJ&pg=PA392&dq=human+activity+sound+detection+classifier&hl=en&sa=X&ved=0ahUKEwiOr6i7ofXLAhXIoQ4KHaDpCaIQ6AEIHTAA#v=onepage&q=human%20activity%20sound%20detection%20classifier&f=false)
 
 [4]: [An Abnormal Sound Detection and Classification System for Surveillance Applications, Cheung-Fat Chan and Eric W.M. Yu, 18th European Signal Processing Conference](http://www.ee.cityu.edu.hk/~cfchan/sound_detection.pdf)
 
 [5]: [Deep Neural Networks for Acoustic Modeling in Speech Recognition, Geoffrey Hinton et.al.](http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/38131.pdf)
 
 [6]: [A Convolutional Neural Network Cascade for Face Detection](http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Li_A_Convolutional_Neural_2015_CVPR_paper.pdf)
+
+[7]: [Model Zoo, Caffe](https://github.com/BVLC/caffe/wiki/Model-Zoo)
+
