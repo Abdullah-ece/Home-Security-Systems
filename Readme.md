@@ -89,6 +89,10 @@ For the purposes of a home based security system, to be used by 1-3 people, a sp
 
 Since we are looking at keyword detection rather than text transcription, we can get a good performance through static (using all of the speech at once as input) rather than dynamic approaches (small windows of speech used to make local classification decisions which are then compiled to make a global decision).  
 
+### Performance Issues
+
+Real-time Image, Audio analysis requires a prohibitive amount of computational processing power and this could easily become a major issue. While the training of the model takes place in its 'rest' mode by the user and is usually the most computationally expensive step, the prediction step would require a non null amount of time to process frames, audio time series and update the status every few seconds. Relatively recent Convolutional Network Cascades hold the potential to enable the coexistence high accuracy as well as high performance for visual detection systems. These methods focus on dropping false positive suggestions like the background in the early stages and focus on more advanced features only for inputs that successfully clear the earlier low resolution  stages.
+
 ## References:
 
 [1]: [Multi-view Face Detection Using Deep Convolutional Neural Networks, S. Sudhakal et.al., Yahoo](http://www.cvrobot.net/wp-content/uploads/2015/06/ICMR-2015-Multi-view-Face-Detection-Using-Deep-Convolutional-Neural-Networks.pdf)
@@ -100,3 +104,5 @@ Since we are looking at keyword detection rather than text transcription, we can
 [4]: [An Abnormal Sound Detection and Classification System for Surveillance Applications, Cheung-Fat Chan and Eric W.M. Yu, 18th European Signal Processing Conference](http://www.ee.cityu.edu.hk/~cfchan/sound_detection.pdf)
 
 [5]: [Deep Neural Networks for Acoustic Modeling in Speech Recognition, Geoffrey Hinton et.al.](http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/38131.pdf)
+
+[6]: [A Convolutional Neural Network Cascade for Face Detection](http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Li_A_Convolutional_Neural_2015_CVPR_paper.pdf)
