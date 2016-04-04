@@ -3,7 +3,6 @@
 
 - Facial Recognition
 - Object type detection
-- Smoke detection
 - Sound Analysis
 - Speech recognition
 
@@ -39,7 +38,7 @@ One issue that plagues facial recognition algorithms and their accuracy are ligh
 
 Caffe though frequently used, pales when compared to Theano or simple libaries like FANN. Deep convoluted neural networks rule the game when it comes to face classification models. While face recognition continues to be highly inaccurate, a method called 'Deep Dense Face Detector' by Yahoo researchers hopes to improve that.
 
-### Which one is it(Dad, Mom, Robin or Lea?)
+### Which user is it?
 
 It would be computation expensive to train a model on K classes, hence one way is to do succesive binary classification comaring the derived human image to the repositary of the users with access to the house. Once can use the Siamese Network Training provided by Caffe to perform this classfication.
 
@@ -89,9 +88,6 @@ For the purposes of a home based security system, to be used by 1-3 people, a sp
 ### Static vs Dynamic approach
 
 Since we are looking at keyword detection rather than text transcription, we can get a good performance through static (using all of the speech at once as input) rather than dynamic approaches (small windows of speech used to make local classification decisions which are then compiled to make a global decision).  
-
-
-## Smoke Detection and Home layout analysis
 
 ## References:
 
