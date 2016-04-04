@@ -19,7 +19,7 @@ Facial detection algorithms would work in three steps once the input become avai
 
 ### Human or not a Human
 
-Refer to Object Classification
+Discussed in section on Object Classification
 
 ### Registered person or not (binary)
 
@@ -35,7 +35,7 @@ One issue that plagues facial recognition algorithms and their accuracy are ligh
 
 Caffe though frequently used, pales when comapred to Theano or simple libaries like FANN. Deep convoluted neural networks rule the roost when it comes to face classification models. While face recognition continues to be highly inaccurate, a method called 'Deep Dense Face Detector' by Yahoo researchers hopes to improve that. [1]
 
-### Which one is it(Dad, Mom, Robin the son)
+### Which one is it(Dad, Mom, Robin or Lea?)
 
 It would be computation expensive to train a model on K classes, hence one way is to do succesive binry classification comaring the derived human image to the repositary of the users with access to the house. Once can use the Siamese Network Training provided by Caffe (Model Zoo) to perform this classfication.
 
@@ -85,12 +85,12 @@ Since we are looking at keyword detection rather than text transcription, we can
 
 ## References:
 
-[1]: [http://www.cvrobot.net/wp-content/uploads/2015/06/ICMR-2015-Multi-view-Face-Detection-Using-Deep-Convolutional-Neural-Networks.pdf](Multi-view Face Detection Using Deep Convolutional Neural Networks, S. Sudhakal et.al., Yahoo)
+[1]: [Multi-view Face Detection Using Deep Convolutional Neural Networks, S. Sudhakal et.al., Yahoo](http://www.cvrobot.net/wp-content/uploads/2015/06/ICMR-2015-Multi-view-Face-Detection-Using-Deep-Convolutional-Neural-Networks.pdf)
 
-[2]: [http://ec.europa.eu/environment/life/project/Projects/index.cfm?fuseaction=home.showFile&rep=file&fil=AMIBIO_periodical_article_EN_2012.pdf](Acoustic Detection of Human Activities in Natural Environments", STAVROS NTALAMPIRAS et. al.)
+[2]: [Acoustic Detection of Human Activities in Natural Environments", STAVROS NTALAMPIRAS et. al.](http://ec.europa.eu/environment/life/project/Projects/index.cfm?fuseaction=home.showFile&rep=file&fil=AMIBIO_periodical_article_EN_2012.pdf)
 
 [3]: Technologies for Smart Sensors and Sensor Fusion, by Kevin Yallup, Krzysztof Iniewski, CRC Press
 
-[4]: [http://www.ee.cityu.edu.hk/~cfchan/sound_detection.pdf](An Abnormal Sound Detection and Classification System for Surveillance Applications, Cheung-Fat Chan and Eric W.M. Yu, 18th European Signal Processing Conference)
+[4]: [An Abnormal Sound Detection and Classification System for Surveillance Applications, Cheung-Fat Chan and Eric W.M. Yu, 18th European Signal Processing Conference](http://www.ee.cityu.edu.hk/~cfchan/sound_detection.pdf)
 
-[5]: [http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/38131.pdf](Deep Neural Networks for Acoustic Modeling in Speech Recognition, Geoffrey Hinton et.al.)
+[5]: [Deep Neural Networks for Acoustic Modeling in Speech Recognition, Geoffrey Hinton et.al.](http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/38131.pdf)
