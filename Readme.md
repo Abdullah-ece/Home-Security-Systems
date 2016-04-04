@@ -1,10 +1,11 @@
 
-## Features of a Smart Home Security System
+## Few Features of a Smart Home Security System
 
 - Facial Recognition
 - Object type detection
 - Sound Analysis
 - Speech recognition
+- Smoke Detection
 
 The first step to before being able to do Image or audio analyses would be to extract relevant frames from the video streams in real time. This is crucial to a smart interactive device and requires extensive down sizing of the data to run the models on the features identified most relevant. One also needs the device to identify and react to certain events (owner coming home, break-in etc) through a frame by frame comparative analysis.
 
@@ -93,6 +94,14 @@ Since we are looking at keyword detection rather than text transcription, we can
 
 Real-time Image, Audio analysis requires a prohibitive amount of computational processing power and this could easily become a major issue. While the training of the model takes place in its 'rest' mode by the user and is usually the most computationally expensive step, the prediction step would require a non null amount of time to process frames, audio time series and update the status every few seconds. Relatively recent Convolutional Network Cascades hold the potential to enable the coexistence high accuracy as well as high performance for visual detection systems. These methods focus on dropping false positive suggestions like the background in the early stages and focus on more advanced features only for inputs that successfully clear the earlier low resolution  stages as [Li, et.al. demonstrate in this paper][6].
 
+## Smoke Detection
+
+Video smoke detectors significantly improve on the drawbacks of current sensor based smoke detectors which rely on the transport delay of the smoke to the detector. Video smoke detectors remove the need for proximity to the fire source while providing additional information about the location, size, nature of the fire in question.
+
+However characterisation of smoke based on edge detection, light intensity, obscuration has failed to produce reliable features for identification. Fujiwara strived to use the geometry of motion of smoke with subsequent Bayesian analysis to assign probability to the event of a fire. [8] while Kopilovic, et.al. suggested using the irregularities in the motion of smoke using panoramic lenses to identify entropy of motion directions as a key feature for smoke/non smoke classification.[9]
+
+Video based smoke detection systems still maintain a higher propensity for false positives than particle based smoke detectors. This is due to the variability in visual patterns of smoke and variable lighting conditions. A standard open source data set could easily rectify these issues and hence most research is based on personally collected datasets.
+
 ## References:
 
 [1]: [Multi-view Face Detection Using Deep Convolutional Neural Networks, S. Sudhakal et.al., Yahoo](http://www.cvrobot.net/wp-content/uploads/2015/06/ICMR-2015-Multi-view-Face-Detection-Using-Deep-Convolutional-Neural-Networks.pdf)
@@ -109,3 +118,6 @@ Real-time Image, Audio analysis requires a prohibitive amount of computational p
 
 [7]: [Model Zoo, Caffe](https://github.com/BVLC/caffe/wiki/Model-Zoo)
 
+[8]: [Extraction of a smoke region using fractal coding, Fujiwara and Terada](http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=1413797&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D1413797)
+
+[9]: [Application of panoramic annular lens for motion analysis tasks: surveillance and smoke detection](http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=903017&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D903017)
